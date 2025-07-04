@@ -4,3 +4,5 @@ export enum AppEnv {
 }
 
 export const SelectedAppEnv: AppEnv = AppEnv.Staging;
+
+export * from './appStrings';
