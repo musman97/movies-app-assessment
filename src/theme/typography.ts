@@ -1,24 +1,26 @@
-import {responsiveFontSize} from 'react-native-responsive-dimensions';
+import {Platform} from 'react-native';
+import {responsiveFontSize} from './utils';
 
 export const Fonts = {
-  ['font_name']: {
-    100: 'font_name-hairline',
-    200: 'font_name-thin',
-    300: 'font_name-light',
-    400: 'font_name-normal',
-    500: 'font_name-medium',
-    600: 'font_name-semibold',
-    700: 'font_name-bold',
-    800: 'font_name-extrabold',
-    900: 'font_name-black',
-    950: 'font_name-extrablack',
-  },
+  Poppins: Platform.select({
+    ios: {
+      400: 'Poppins-Regular',
+      500: 'Poppins-Medium',
+      600: 'Poppins-SemiBold',
+    },
+    default: {
+      400: 'Poppins_400Regular',
+      500: 'Poppins_500Medium',
+      600: 'Poppins_600SemiBold',
+    },
+  }),
 } as const;
 
 export const FontSize = {
-  xs: responsiveFontSize(1),
-  sm: responsiveFontSize(2),
-  md: responsiveFontSize(2.5),
-  lg: responsiveFontSize(3),
-  xl: responsiveFontSize(4),
+  xs: responsiveFontSize(10), // ~10px
+  sm: responsiveFontSize(12), // ~12px
+  md: responsiveFontSize(14), // ~14px (base size)
+  lg: responsiveFontSize(16), // ~16px
+  xl: responsiveFontSize(20), // ~20px
+  xxl: responsiveFontSize(24), // ~24px
 } as const;
