@@ -5,7 +5,7 @@ import {HttpMethod} from './constants';
 type ApiRequestConfigBase = {
   endpoint: string;
   method: HttpMethod;
-  withAuth: boolean;
+  withAuth?: boolean;
   accessToken?: string;
   query?: Record<string, string>;
   rejectOnError?: boolean;
@@ -33,9 +33,13 @@ export type ApiResult<R> = ApiSuccessResult<R> | ApiFailureResult;
 export type GeneralApiResponseData = {message?: string};
 
 export type GeneralApiResponse<D = unknown> = {
-  error?: string;
-  message?: string;
-  data?: D;
+  success?: boolean;
+  status_message?: string;
+  status_code?: string;
+  page?: number;
+  results?: D;
+  total_pages?: number;
+  total_results?: number;
 };
 
 interface BaseCreateApiHandlerConfig {

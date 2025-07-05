@@ -1,4 +1,8 @@
-import {AxiosRequestConfig, AxiosResponse} from 'axios';
+import {
+  AxiosRequestConfig,
+  AxiosResponse,
+  isAxiosError as isAxiosErrorInternal,
+} from 'axios';
 import {isObjectNotEmpty} from '~/utils';
 import {ApiErrorMessage} from './constants';
 import {ApiFailureResult, ApiRequestConfig, ApiSuccessResult} from './types';
@@ -54,3 +58,5 @@ export const isApiSuccessResult = <D>(
 ): value is ApiSuccessResult<D> => value?.[SuccessResultSymbol] === true;
 export const isApiFailureResult = (value: any): value is ApiFailureResult =>
   value?.[FailureResultSymbol] === true;
+
+export const isAxiosError = isAxiosErrorInternal;

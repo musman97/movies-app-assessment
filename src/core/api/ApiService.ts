@@ -1,5 +1,5 @@
-import {UserApiService} from './user';
+import {MoviesApiService} from './movies';
 
 export const ApiService = {
-  User: UserApiService,
+  Movies: MoviesApiService,
 } as const;

@@ -4,7 +4,7 @@ import {Fonts, FontSize, GlobalStyles, responsiveFontSize} from '~/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    padding: responsiveHeight(2),
+    paddingVertical: responsiveHeight(2),
     alignSelf: 'center',
     ...GlobalStyles.containerWidth,
   },

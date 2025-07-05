@@ -1,6 +1,6 @@
 import {DimensionValue, StyleSheet} from 'react-native';
 
-export const HorizontalWidthPercentageValue = 98;
+export const HorizontalWidthPercentageValue = 90;
 export const HorizontalWidthPercentage: DimensionValue = `${HorizontalWidthPercentageValue}%`;
 
 export const GlobalStyles = StyleSheet.create({

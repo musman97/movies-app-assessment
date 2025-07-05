@@ -1,10 +1,3 @@
-import {AppEnv, SelectedAppEnv} from '~/constants';
-
-const BaseUrls = {
-  [AppEnv.Staging]: 'www.expamle-staging.com/',
-  [AppEnv.Prod]: 'www.example-prod.com/',
-};
-
 export enum ApiErrorMessage {
   General = 'Something went wrong',
   Network = 'Network error',
@@ -30,12 +23,12 @@ export enum ApiState {
 }
 
 export const ApiEndpoints = {
-  User: {
-    Login: 'auth/login',
+  Movies: {
+    Upcoming: '/movie/upcoming',
   },
 };
 
-export const BaseUrl = BaseUrls[SelectedAppEnv];
+export const BaseUrl = process.env.EXPO_PUBLIC_TMDB_API_BASE_URL ?? '';
 
 export const NetworkErrorMessage = 'Network Error';
 
