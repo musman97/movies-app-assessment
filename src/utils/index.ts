@@ -31,3 +31,6 @@ export const {positive: isObjectEmpty, negative: isObjectNotEmpty} =
 
 export const isError = (error: unknown): error is Error =>
   error instanceof Error;
+
+export const makePosterUrl = (posterPath: string) =>
+  `${process.env.EXPO_PUBLIC_TMDB_API_BASE_IMAGE_URL}/${posterPath}`;

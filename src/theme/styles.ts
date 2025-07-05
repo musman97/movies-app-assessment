@@ -1,4 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {DimensionValue, StyleSheet} from 'react-native';
+
+export const HorizontalWidthPercentageValue = 90;
+export const HorizontalWidthPercentage: DimensionValue = `${HorizontalWidthPercentageValue}%`;
 
 export const GlobalStyles = StyleSheet.create({
   f1: {
@@ -9,4 +12,11 @@ export const GlobalStyles = StyleSheet.create({
     alignItems: 'center',
   },
   emptyStyle: {},
+  containerWidth: {
+    width: HorizontalWidthPercentage,
+  },
+  centered: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
