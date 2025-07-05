@@ -15,4 +15,8 @@ export const GlobalStyles = StyleSheet.create({
   containerWidth: {
     width: HorizontalWidthPercentage,
   },
+  centered: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
